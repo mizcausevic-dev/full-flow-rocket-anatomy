@@ -1,0 +1,15 @@
+export const palette = {
+  stage: "#0B1019",
+  stageLift: "#121A27",
+  metal: "#344257",
+  metalDeep: "#243044",
+  metalEdge: "#8EA0B8",
+  bore: "#0E141E",
+  loxBody: "#7E97A8",
+  fuelBody: "#A39880",
+  cyan: "#00E5FF",
+  gold: "#FFD166",
+  violet: "#9D4EDD",
+  bone: "#E8EEF6",
+  muted: "#93A0B5",
+} as const;
