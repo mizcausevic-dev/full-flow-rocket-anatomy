@@ -1,131 +1,146 @@
-# Every Drop of Propellant Burns Twice: The Full-Flow Rocket Engine, Explained in 1,020 Frames
+# How full-flow staged combustion works
 
-**A code-driven, anatomy-style motion explainer of a full-flow staged-combustion rocket engine. Feed lines, turbopumps, two preburners burning opposite mixtures, regenerative cooling, and nozzle expansion, in 34 seconds at 30 frames per second.**
+A Raptor-inspired sectional model of the closed cycle that runs both propellants through turbines, then finishes the burn in one chamber. The film is 34 seconds. It does not invent a chamber pressure.
 
-*By Miz Causevic, Kinetic Gain LLC. Raptor-inspired conceptual model. Schematic, not to scale. This is a consolidated working brief, not a certified engineering reference. Verify subject-specific details before publication.*
+![Editorial rendering of a methalox-style rocket engine on a dark stand: two pump housings above one chamber and one bell nozzle. Not a photograph of a flight engine and not a measured cross-section.](hero-editorial.jpg)
 
-**Live explainer:** https://mizcausevic-dev.github.io/full-flow-rocket-engine-explainer/
-**Source code:** https://github.com/mizcausevic-dev/full-flow-rocket-engine-explainer
-**Hero image:** `hero.svg` in the repository (1,200 x 630, Open Graph ready)
+Editorial rendering for the header. Two housings, one chamber, one bell. It is not a photograph of a flight Raptor and not the sectional model in the player.
 
----
+## The cycle in one paragraph
 
-## BLUF: the one idea to keep
+A full-flow staged combustion engine burns its propellants twice on purpose. A small burn in each preburner drives that propellant's turbine. The turbine exhaust is still mostly unburned propellant, so it is ducted into the main chamber and burned there. Nothing in this cycle is thrown overboard to spin the pumps.
 
-In a full-flow staged-combustion engine, nothing that can burn is thrown away before it has done two jobs.
+That routing is the idea. Thrust still comes from hot gas leaving a nozzle. The machinery above the nozzle exists to raise propellant pressure without wasting the drive gas, and to do it on two separate shafts so fuel-rich gas and oxidizer-rich gas do not have to share one rotor.
 
-Every stream of propellant passes through a preburner first. There it burns partially, gives up energy to spin a turbine, and then travels onward to the main combustion chamber, where it burns to completion. The pumps are powered by propellant that was going to burn anyway. The chamber is fed with gas that is already hot and already moving.
+This piece walks the same five beats as the film: feeds and pumps, two preburners, turbine gas into the chamber, chamber burn with regenerative cooling, and nozzle expansion. The subject is the methalox version of the cycle, the family SpaceX's Raptor flies. The plate is a conceptual section. It is not a drawing of a specific Raptor serial number, and it is not a certified engineering reference.
 
-That single design decision, route everything through the fire twice, is the subject of a 34-second animation built entirely in code. One thousand and twenty frames. Thirty frames per second. Five causal phases. No video file, no rendered footage, and no specification invented to make the story sound more impressive than the mechanism already is.
+## What "full-flow" claims
 
-If you only watch ten seconds, watch frames 150 to 299. That is where the cycle earns its name.
+Staged combustion means some of the burning happens before the main chamber, in preburners that power the turbines.
 
-## Why this engine needed an anatomy lesson, not another launch video
+Full-flow means both propellants take that path. One preburner runs fuel-rich. The other runs oxidizer-rich. Each drives only its own turbopump. The two hot streams meet in the main chamber.
 
-Rocket engines are usually explained in one of two unhelpful ways.
+Neighboring cycles make the distinction concrete. The comparison is about where the drive gas goes. It is not a ranking of efficiency, thrust, or reliability.
 
-The first is spectacle. Slow motion exhaust, a wall of fire, a thrust figure in a headline. Spectacle tells you the machine is powerful. It tells you nothing about why it works.
+| Cycle | What drives the turbines | Where the turbine exhaust goes |
+| --- | --- | --- |
+| Gas generator, open cycle | A small burned stream | Overboard, beside the nozzle |
+| Fuel-rich staged combustion | Fuel-rich preburner gas | Into the main chamber |
+| Oxidizer-rich staged combustion | Oxidizer-rich preburner gas | Into the main chamber |
+| Full-flow staged combustion | Both of the above, on separate shafts | Both streams into the main chamber |
 
-The second is the specification sheet. Chamber pressure, pump speed, mixture ratio, thrust, efficiency. Those numbers matter enormously to the people who design and certify engines. To a reader trying to build a mental model, they are conclusions without the reasoning that produced them.
+The open cycle is the simpler machine, and it throws away the turbine drive gas. Staged combustion keeps that gas and burns it. Full-flow does this for both propellants, so the main chamber injects gas into gas.
 
-An anatomy explainer takes the third path. It cuts the machine open in section, keeps every connection visible, and moves at the speed of causation rather than the speed of combustion. You see where each stream comes from, what it does on the way, and what it makes possible next. When the camera zooms into the pumps, the feed inlets stay in frame. When it follows hot gas toward the chamber, the turbine and the shaft it drives stay connected on screen. Nothing appears from nowhere, and nothing vanishes without a destination.
+Felix Becker's public walkthrough, "How SpaceX's Raptor works, one problem at a time" (becker.so/raptor, September 2026), uses that topology and then prints chamber pressures and thrust figures for Raptor versions. A 2019 Wired report describes full-flow as the cycle on Raptor and describes earlier attempts as not having flown. Those pieces are explainers, not a released SpaceX cross-section. Where they add operating numbers, this project does not repeat the numbers as facts it established. Becker's pressure and thrust figures stay in his article. They are not on this plate.
 
-That discipline is also why the animation carries its limits on its face. Every frame is stamped with the same plain statement: not to scale, sectional schematic, time compressed, rotation slowed, no invented specifications. The turbine you see turning is turning far more slowly than any real turbine. The flame is a sustained combustion zone, explicitly not detonation. The colours are labels, not physics. Cyan means primary pathway. Gold means actuation or energy. Violet means sensing or a change of state. Real metal, real exhaust, and real flame do not look like the diagram, and the diagram refuses to pretend otherwise.
+## Stage 1: separate feeds, separate pumps
 
-## The mechanism, phase by phase
+Liquid methane and liquid oxygen arrive on separate lines. At one atmosphere, methane boils near 112 K and oxygen near 90 K. Those are ordinary fluid properties, not engine operating points. The tanks are not drawn. The film starts where the engine plumbing starts.
 
-### Phase 1, frames 0 to 149 (0 to 5 seconds): feed lines and pumps
+Each liquid enters its own turbopump. A turbopump is a pump and a turbine on one shaft. The pump raises the liquid's pressure. The turbine is what will drive it, and that drive is the subject of a later shot. In the first five seconds the shafts are already visible, so the later energy path has a machine to land on. There are two shafts. The plate does not show a coaxial arrangement, and it does not show a rotational speed. The impellers and blade rows are section symbols. Their angle does not change with the frame, because a spinning marker would be read as an RPM this project does not have.
 
-Two inlets. Liquid methane on one side, liquid oxygen on the other. Each stream meets its own pump, and each pump sits on its own shaft.
+The camera moves from a wider view of the powerhead down onto the two pumps, and it keeps the preburners in the lower part of the frame. That is the causal link. The pumps are not a separate topic from the burners they feed.
 
-That last point is drawn deliberately. It would be tidier to show one shared shaft driving both pumps, and some engines do package turbomachinery compactly. This explainer makes no such claim about the machine it is inspired by, so it draws no coaxial arrangement. Separate pumps, separate shafts, separate turbines to come. Accuracy in a schematic often lives in what you refuse to draw.
+## Stage 2: both propellants, two ratios
 
-Nothing burns in this phase. Its job is pressure and flow, the precondition for everything downstream. Causally, it answers the first question a reader should ask: where does the energy to move all this liquid come from? Hold that question. Phase 3 answers it.
+Each preburner receives both propellants. The split is intentionally lopsided, and the two preburners are lopsided in opposite directions.
 
-### Phase 2, frames 150 to 299 (5 to 10 seconds): both propellants, both preburners, different ratios
+The fuel-rich preburner takes most of the methane and a small oxidizer fraction. Its exhaust is hot, and it is still mostly fuel. The oxidizer-rich preburner takes most of the oxygen and a small fuel fraction. Its exhaust is hot, and it is still mostly oxidizer.
 
-This is the defining move of the full-flow cycle, and the phase most summaries flatten into a sentence.
+The bars beside the cans are marked schematic. Width means "most" or "a little." There is no mixture ratio on the figure. The main chamber runs at a third balance, when the two streams finally meet. That is why the preburners are not small copies of the main chamber.
 
-Each preburner receives both propellants. One receives most of the fuel and a small share of the oxidiser, so its partial burn stays fuel-rich. The other receives most of the oxidiser and a small share of the fuel, so its partial burn stays oxidiser-rich. Main lines and smaller cross-feed branches make that split visible, and a pair of ratio bars grows in beneath each preburner to make the proportion legible at a glance.
+The methane does not go straight from its pump into its preburner. In the teaching route for this cycle, pumped methane first passes through the wall channels of the chamber and nozzle, then into the fuel-rich preburner. Oxygen takes the shorter path from its pump to the oxidizer-rich preburner, with a thin cross-feed of each propellant into the other can. Flight hardware has changed across Raptor versions, including how much of that plumbing is visible on the outside. Treat the jacket order as the conceptual path.
 
-The bars carry no numbers. That is a deliberate editorial decision, not missing data. A mixture ratio printed without a primary source would be an invented specification, and an invented specification in an educational diagram is worse than no number at all, because diagrams get screenshotted and numbers travel. What the reader needs here is the shape of the idea: same two ingredients, opposite proportions, each tuned to the turbine it is about to drive.
+The valves drawn on the cross-feeds are state marks. They read "open" for the steady run the film depicts. They are not a measured valve angle, and the film does not show the start sequence that would move them.
 
-### Phase 3, frames 300 to 509 (10 to 17 seconds): turbine gases travel onward to the chamber
+## Stage 3: turbine gas goes to the chamber
 
-Hot gas from each preburner expands through its turbine. The turbine extracts work. A shaft carries that work to a pump. The pump pressurises the incoming liquid from Phase 1. The loop closes.
+Gas leaves each preburner and enters its turbine. The turbine takes enthalpy out of the gas and delivers shaft work to the pump on that same spool. Gold marks that energy path. It is not a flame, not a torque number, and not a speed. The gold arrow points from the turbine up toward the pump and then holds still.
 
-Then comes the step that separates this cycle from simpler staged designs: the gas that just spun the turbine is not exhausted overboard. Both streams, fuel-rich and oxidiser-rich, continue through hot-gas ducts to the injector face of the main chamber. The camera follows those ducts downward and keeps the turbine, shaft, and pump in frame as long as it can, because the connection is the content.
+After the turbine, the gas is still propellant. In a gas-generator cycle this is where a duct would turn overboard. Here both ducts turn inward, to the injector. The fuel-rich stream and the oxidizer-rich stream enter the main chamber as gases. The camera follows those ducts while the turbines remain in frame. Same gas, two jobs: turn the shaft, then burn.
 
-Full-flow means exactly this. All of the flow. Through the preburners, through the turbines, and into the chamber.
+Violet marks state, not a sensor brand. A tap on the chamber wall and a tap near the injector mean "this is the kind of place a pressure or temperature measurement lives." The plate shows no value. A value would be invented.
 
-### Phase 4, frames 510 to 749 (17 to 25 seconds): chamber burn and regenerative cooling
+The injector is a face with a row of ports. It is not a claimed element pattern. Coaxial, pintle, and swirl arrangements are real injector families. This drawing does not pick one.
 
-The two hot streams meet in the main chamber and burn to completion. The animation labels this carefully: sustained combustion. A rocket chamber is a controlled, continuous burn sustained for the duration of the firing. It is not a detonation, and conflating the two is one of the most common errors in popular engine writing. The diagram names the distinction on screen rather than leaving it to a footnote.
+## Stage 4: steady burn, cooled wall
 
-At the same time, the chamber wall opens in section. Inside the wall, cooling passages carry propellant around the chamber before that propellant is injected. The stream absorbs heat from a wall that would otherwise have to survive the full thermal load unaided, and it arrives at the injector already warmed. Cooling and feed are the same stream doing two jobs, which rhymes with the engine-level idea from Phase 3: in a well-integrated cycle, streams multitask.
+The two gases meet and burn. The warm region inside the chamber is a mark so the gas is not mistaken for metal. The caption calls it steady combustion. That is deflagration. It is not a detonation. Detonation is a supersonic, shock-coupled reaction. This chamber is a continuous burner. The drawing also refuses to fake turbulence, mixing length, or an injector element it cannot represent faithfully.
 
-One honest limitation belongs here. The precise routing of coolant through a real chamber, which stream, in which direction, through which passage geometry, is engine-specific design detail. The explainer shows the heat-pickup principle in section and says so. A schematic that labelled a specific routing as fact would be claiming knowledge it does not have.
+The wall would not survive that gas by material choice alone. Regenerative cooling runs the cold fuel through channels in the wall. Heat moves from the hot gas, through the liner, into the methane. The methane arrives at the fuel-rich preburner warmer than it left the pump. The arrows are a steady-state schematic. Startup, shutdown, and boiling crisis are not modeled. The film labels that limit as time compression.
 
-### Phase 5, frames 750 to 1019 (25 to 34 seconds): nozzle expansion, then the whole machine
+Channel height is exaggerated, and an inset enlarges the wall further. Both are labeled as a scale change. The liner alloy is not named. "High-conductivity liner" is as far as the plate goes. Hot oxygen-rich gas is aggressive toward metal, which is why oxidizer-rich turbines are a materials problem and not only a plumbing problem. This page does not name the alloy.
 
-Chamber gas enters the bell nozzle, expands, and accelerates rearward. Thrust is the reaction to that accelerated mass. The diagram draws gimbal actuators beside the nozzle and pointedly states no gimbal angle, because an angle would be another invented number. Violet sensor markers, which have pulsed quietly at inlets, preburners, and chamber wall throughout, keep doing the only job assigned to them: showing where state is sensed, never what value was measured.
+The shot is also labeled slow motion. A chamber residence time is on the order of milliseconds. A label cannot be read in a millisecond, so the clock of the film is not the clock of the gas. The moving dashes on the pathways are a direction cue. They are not scaled to a real velocity. That sentence applies to every chapter, and it matters most here, where a viewer could mistake the dash speed for a flow speed.
 
-Then the camera does the most important thing in the piece. It pulls back. Over the final frames the pumps, preburners, turbines, chamber, and nozzle return to one wide composition, the same framing the viewer saw at frame 0, except that now every component has been visited and every connection explained. The last frames hold still. An explainer should end on the whole system, stable, because the whole system was the point.
+## Stage 5: the nozzle
 
-## Built as code, not rendered as video
+Upstream of the throat, the contour converges. At the throat it is narrowest. Downstream it opens into a bell. For a choked de Laval nozzle the standard relation is subsonic in the chamber, sonic at the throat, and supersonic in the bell. The inset states those regimes and does not state a Mach number. Arrow length is not used as a fake velocity scale. The centerline dash continues, still as a direction cue.
 
-The explainer is not a video file. It is a small web application in which every frame is computed by a pure function of an integer.
+The bell contour is a teaching shape. It is smooth, it has a throat, and it opens. It is not a Rao contour for a named engine, and it is not a measured Raptor nozzle. The boundary drawn past the exit is an illustration of a plume edge, in the same cyan used for other explanatory marks, so it is not mistaken for a photograph of fire. Drawing shock diamonds would imply a specific pressure ratio. This model does not have one.
 
-Scrub to frame 225 and you are mid Phase 2, ratio bars at full width, cross-feeds traced. Step one frame forward, then back. The picture returns exactly. Reload the page, scrub to 225 again, export the frame as a PNG, and it matches the export from before. Camera position comes from keyframes interpolated with a smooth easing curve. Flow markers sit on named paths at positions derived from the frame index. Turbines rotate by an angle that is a direct multiple of the frame count. Change the frame, and only the frame, and the entire scene follows deterministically.
+The camera travels down the bell, then eases back until the pumps, preburners, chamber, and nozzle sit in one frame. The last stretch, from frame 980 through frame 1019, is held still. The player stops there. It does not loop, because a loop would throw away the only moment when the whole path can be read at once.
 
-That architecture buys three things a video cannot.
+## What the model refuses
 
-First, inspection. A reader who does not believe the preburner split can pause on the exact frame, step through the branch lines, and check the topology for themselves.
+- Chamber pressure, turbine speed, gimbal angle, mixture ratio, thrust, specific impulse, and mass flow.
+- A coaxial dual-pump rotor. Each propellant has its own shaft.
+- Ignition sequence, valve timing, and startup transients. The run drawn here is steady.
+- Tank pressurization taps, including autogenous gas returned to the tanks.
+- A specific Raptor version's external plumbing, materials, or injector.
+- Any claim that the cycle is the most efficient in a ranked sense. Keeping the turbine gas is a routing fact. A ranking needs a propellant, an altitude, a nozzle, and a measured specific impulse. None of that is asserted here.
+- Gimbaling. Thrust vectoring is omitted rather than drawn at an invented angle.
 
-Second, reuse. The transport, timeline, phase captions, state panel, and camera system know nothing about rockets. Replace the drawn anatomy and the phase table, and the same shell explains a gas turbine, a fuel cell, or a hospital dialysis circuit. The reusable asset is the explainer pattern. The rocket is its first subject, not its only one.
+## Why the cycle is hard, without the brochure
 
-Third, honesty enforcement. Because every visual element is code, every claim on screen is a line a reviewer can read. There is no narration track quietly asserting a number the picture never showed. The guardrails, no pressures, no speeds, no ratios, no performance figures, are not a style guide the author tried to remember. They are properties of what was never written into the scene.
+Two preburners have to stay in balance. Each turbine has to supply the pump work for its own propellant, and the two mixture ratios have to leave the right residual propellants for the main chamber. The plate shows the existence of that coupling. It does not show a control law.
 
-Playback runs in the browser at 30 frames per second with pause, single-frame stepping, chapter buttons for each phase, playback speed control, toggleable labels and flow markers, a frame-accurate timecode, PNG export of any frame, and a copyable JSON description of the current frame state. Keyboard controls mirror the transport: space to play or pause, arrow keys to step, shift plus arrows to jump ten frames.
+The oxidizer side adds a materials constraint the fuel side does not. The turbine gas is mostly hot oxygen. The fuel side, on methane, avoids the coking reputation of kerosene, and this page does not turn that qualitative comparison into a life number.
 
-## What this explainer deliberately does not do
+Becker also notes that a running full-flow engine feeds itself: the preburners make the gas that spins the pumps that feed the preburners. Starting from a dead stop is a different problem, and he writes that SpaceX has not published Raptor's start sequence. This film does not invent one. The badge on the first chapter says the steady run is what is drawn.
 
-It does not quote thrust, chamber pressure, pump rotational speed, mixture ratio, specific impulse, or efficiency. It does not state a gimbal range. It does not draw a coaxial pump arrangement. It does not present flame colour, plume shape, or part proportions as physical data. It does not decorate the scene with particles that imply instrumentation or phenomena it cannot support. Its sensor markers show that sensing exists at a location, and nothing more.
+## How to watch the film
 
-Those omissions are the editorial product. Anyone can add numbers to a rocket diagram. The work is building one that stays useful, and stays honest, with the numbers left out.
+The player is frame-locked. Frame 510 is the same picture every time you land on it. Scrub, or jump with keys 1 through 5. Cyan is the propellant path. Gold is shaft work and the heat path. Violet is sensing or state. Hardware stays in the metal color. If a panel says schematic, it is a diagram sitting beside the hardware.
 
-## Who this is for, and what to do with it
+Prefers-reduced-motion stops autoplay. The chapter text is in the page, not only inside the canvas, so the explanation survives without the drawing. The canvas pauses when it is off screen.
 
-For engineering communicators, it is a template: pick a machine whose value lives in its connections, cut it in section, colour by function rather than by material, and let causation set the camera path.
+The path motion is the only thing that changes inside the machine. Parts do not fly apart. A section cut is not an exploded view. If a mechanism could not be drawn without pretending, it became a labeled schematic or it was left out.
 
-For educators, it is a classroom-safe artefact. It can be paused mid-phase, projected, scrubbed backwards, and interrogated, and its on-screen disclaimers model the habit students most need: state your scale, state your compression, state what you are not claiming.
+## Sources and review status
 
-For teams building technical content systems, it is a proof that a single deterministic scene file can serve as the animation, the poster frame, the frame-export tool, and the source for stills, without a render pipeline. The hero image for this article is drawn from the same visual system as the animation itself.
+Cycle topology used here: two preburners, two turbopumps, turbine exhaust injected into the main chamber, methane as the regenerative coolant in the methalox teaching route. Read against Becker's September 2026 explainer at becker.so/raptor, which states the full-flow split in those terms and dates Raptor's first flight to Starhopper in July 2019 after the RD-270 and the Integrated Powerhead Demonstrator. The Wired report at wired.com/story/spacex-raptor-engine-starship/ is the earlier popular account that full-flow had been tried twice before and had not flown. Confirm the flight date against a primary source before you depend on it in anything that has to be exact.
 
-For everyone else, it is 34 seconds after which the phrase full-flow staged combustion stops being jargon and becomes a picture you own: everything burns twice, nothing is wasted on the way, and the engine is the plumbing that makes those two facts the same fact.
+This is a consolidated working brief turned into a film and an essay. It is not a certified engineering reference. Verify the subject before publication, design use, or any claim about a flight engine. The source brief also carries a medical-review line written for a series that includes clinical topics. This page is aerospace. It is not clinical instruction.
 
-## Try it, then check my work
+Nothing here collects an address, a measurement, or an account. The player runs in the browser from the frame index. There is no analytics tag on the page.
 
-Open the live explainer. Scrub to frame 0, then to frame 1019, and confirm the camera has come home. Pause at frame 600 and read the chamber section. Export any frame twice and compare. Then open the repository, read the timeline table, and look for a specification. You will not find one, and finding none is the verification.
+## Questions people actually ask
 
-That is the standard this format should be held to. Not how impressive the fire looks, but whether every claim on screen can survive a reader with a pause button.
+### What is full-flow staged combustion?
 
----
+It is a closed rocket cycle with two preburners. One runs fuel-rich and drives the fuel turbopump. One runs oxidizer-rich and drives the oxidizer turbopump. Both turbine streams then enter the main chamber and finish burning. Full-flow means both propellants take a turbine path, rather than only one of them.
 
-**About the author.** Miz Causevic is the founder of Kinetic Gain LLC, where he works on web engineering, technical communication, and governance-first product systems. This explainer was built as a reusable, code-driven anatomy format for complex machines.
+### How is it different from a gas-generator cycle?
 
-**Canonical links.**
-Live explainer: https://mizcausevic-dev.github.io/full-flow-rocket-engine-explainer/
-Repository: https://github.com/mizcausevic-dev/full-flow-rocket-engine-explainer
-Hero image: https://mizcausevic-dev.github.io/full-flow-rocket-engine-explainer/hero.svg
+A gas-generator cycle burns a little propellant to spin the turbines and dumps that gas overboard. Staged combustion ducts the turbine exhaust into the main chamber and burns it there. Full-flow staged combustion does that with two preburners, one for each propellant.
 
-**Suggested Medium tags.** Aerospace Engineering, Rocket Science, Spacex, Engineering, Data Visualization, Technical Communication, Web Development, Science Communication
+### Why are there two preburners?
 
-**SEO title options.**
-1. Full-Flow Rocket Engine Explained: Why Every Drop of Propellant Burns Twice
-2. How a Full-Flow Staged Combustion Engine Works, in 1,020 Frames
-3. Preburners, Turbopumps and Regenerative Cooling: A 34-Second Anatomy of the Full-Flow Cycle
+So each turbopump can be driven by gas that is already rich in its own propellant. The fuel turbine sees fuel-rich gas. The oxidizer turbine sees oxidizer-rich gas. The plate shows two shafts for that reason. It does not show a coaxial dual-pump rotor.
 
-**Meta description.** How does a full-flow staged-combustion rocket engine work? A code-driven anatomy explainer in 1,020 frames: feed lines, dual preburners, turbines, regenerative cooling and nozzle expansion. Schematic, no invented specs.
+### Where does regenerative cooling sit in the path?
 
-*Review status: consolidated working brief, not a certified engineering reference. Verify subject-specific details before publication.*
+In the teaching route drawn here, pumped liquid methane flows through channels in the chamber and nozzle wall before it reaches the fuel-rich preburner. The methane picks up wall heat. The oxidizer goes from its pump to the oxidizer-rich preburner. Flight plumbing differs by engine version, so the drawing is labeled as a route, not as a tube map of one serial number.
+
+### Is the chamber combustion a detonation?
+
+No. The chamber in this cycle is a continuous burner. The reaction is deflagration. Detonation is a supersonic, shock-coupled reaction, and nothing on this plate is drawn that way.
+
+### Why are there no pressures, speeds, or mixture ratios?
+
+The source brief forbids invented pressures, rotational speeds, gimbal angles, and a coaxial pump arrangement. Public explainers sometimes print those figures. This project did not measure them, so the plate and this article do not adopt them. Bar widths mean most or a little.
+
+### Is this a drawing of a flight Raptor?
+
+It is a Raptor-inspired conceptual model of the full-flow methalox cycle. It is not a dimensioned cross-section of Raptor 1, 2, or 3. SpaceX has not published the drawing this plate would have to match. The editorial photograph is a rendering of an engine on a stand, not flight hardware.

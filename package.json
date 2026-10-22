@@ -2,15 +2,26 @@
   "name": "full-flow-rocket-engine-explainer",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "description": "Code-driven, anatomy-style motion explainer of a full-flow staged-combustion rocket engine. 1,020 frames at 30 fps (34 s). Raptor-inspired conceptual model, schematic only.",
   "scripts": {
-    "dev": "vite --port 43217 --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --port 43217 --host 127.0.0.1"
+    "dev": "next dev -H 127.0.0.1 -p 4317",
+    "build": "next build",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/full-flow-rocket-engine-explainer next build",
+    "lint": "eslint",
+    "test": "node --experimental-strip-types --test src/engine/timing.test.ts"
+  },
+  "dependencies": {
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "typescript": "^5.6.3",
-    "vite": "^5.4.10"
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
