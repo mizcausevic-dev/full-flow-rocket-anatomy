@@ -1,0 +1,1 @@
+{"name":"full-flow-rocket-engine-explainer","version":"1.0.0","type":"module","scripts":{"dev":"vite --port 43217 --host 127.0.0.1","build":"vite build","preview":"vite preview --port 43217 --host 127.0.0.1"},"devDependencies":{"vite":"^5.4.0"}}
