@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Hero image: sectional schematic of a full-flow rocket engine">
+  <defs>
+    <linearGradient id="plume" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DFF9FF"/><stop offset=".35" stop-color="#00E5FF" stop-opacity=".8"/><stop offset="1" stop-color="#9D4EDD" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAFBFF"/><stop offset=".4" stop-color="#00E5FF"/><stop offset=".75" stop-color="#FFD166"/><stop offset="1" stop-color="#FF7A45" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1019"/>
+  <g stroke="rgba(255,255,255,.05)"><path d="M0 52H1200M0 104H1200M0 156H1200M0 208H1200M0 260H1200M0 312H1200M0 364H1200M0 416H1200M0 468H1200M0 520H1200M0 572H1200"/></g>
+  <g font-family="'Space Grotesk',Arial,sans-serif">
+    <text x="56" y="86" font-family="monospace" font-size="13" letter-spacing="3" fill="#00E5FF">ANATOMY MOTION EXPLAINER · AEROSPACE ENGINEERING</text>
+    <text x="54" y="150" font-size="58" font-weight="700" fill="#E8EEF7">Every drop of propellant</text>
+    <text x="54" y="214" font-size="58" font-weight="700" fill="#00E5FF">burns twice.</text>
+    <text x="56" y="262" font-size="20" fill="#C7D2E4">The full-flow rocket engine, cut open in 1,020 frames.</text>
+    <text x="56" y="300" font-size="15" fill="#93A4BC">Feed lines · pumps · dual preburners · turbines · regenerative cooling · nozzle expansion</text>
+    <g font-family="monospace" font-size="12" fill="#93A4BC">
+      <rect x="56" y="336" width="238" height="34" rx="17" fill="#111B2E" stroke="#22345A"/><text x="72" y="358">1,020 FRAMES · 30 FPS · 34 S</text>
+      <rect x="306" y="336" width="238" height="34" rx="17" fill="#111B2E" stroke="#22345A"/><text x="322" y="358">DETERMINISTIC · SCRUB ANY FRAME</text>
+      <rect x="556" y="336" width="238" height="34" rx="17" fill="#111B2E" stroke="#7A5A14"/><text x="572" y="358" fill="#FFD166">NO INVENTED SPECIFICATIONS</text>
+    </g>
+    <g font-family="monospace" font-size="11">
+      <text x="56" y="420" fill="#00E5FF">CYAN - PRIMARY PATHWAY</text>
+      <text x="56" y="446" fill="#FFD166">GOLD - ACTUATION / ENERGY</text>
+      <text x="56" y="472" fill="#C99AF0">VIOLET - SENSING / STATE</text>
+      <text x="56" y="520" fill="#64748F">RAPTOR-INSPIRED CONCEPTUAL MODEL · SECTIONAL SCHEMATIC</text>
+      <text x="56" y="544" fill="#64748F">NOT TO SCALE · TIME COMPRESSED · COMBUSTION, NOT DETONATION</text>
+      <text x="56" y="584" fill="#E8EEF7" font-size="13">Kinetic Gain LLC · mizcausevic-dev</text>
+    </g>
+  </g>
+  <!-- engine schematic, right -->
+  <g transform="translate(221,-7) scale(0.87)">
+    <rect x="700" y="54" width="150" height="52" rx="12" fill="#344257" stroke="#5A718F"/>
+    <rect x="950" y="54" width="150" height="52" rx="12" fill="#344257" stroke="#5A718F"/>
+    <text x="775" y="86" text-anchor="middle" font-family="monospace" font-size="11" fill="#DCE8F7">CH- FEED</text>
+    <text x="1025" y="86" text-anchor="middle" font-family="monospace" font-size="11" fill="#DCE8F7">LOX FEED</text>
+    <path d="M775 106 L775 168 M1025 106 L1025 168" stroke="#00E5FF" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="775" cy="205" r="36" fill="#344257" stroke="#5A718F"/><circle cx="1025" cy="205" r="36" fill="#344257" stroke="#5A718F"/>
+    <path d="M775 205 L792 190 M775 205 L758 190 M775 205 L775 222" stroke="#FFD166" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1025 205 L1008 190 M1025 205 L1042 190 M1025 205 L1025 222" stroke="#FFD166" stroke-width="5" stroke-linecap="round"/>
+    <text x="775" y="262" text-anchor="middle" font-family="monospace" font-size="10" fill="#93A4BC">FUEL PUMP</text>
+    <text x="1025" y="262" text-anchor="middle" font-family="monospace" font-size="10" fill="#93A4BC">OX PUMP</text>
+    <path d="M775 241 C775 300 810 306 838 330 M1025 241 C1025 300 990 306 962 330 M790 282 C880 262 940 282 948 330 M1010 282 C920 262 860 282 852 330" stroke="#00E5FF" stroke-width="4" fill="none" opacity=".85"/>
+    <rect x="768" y="330" width="140" height="62" rx="12" fill="#344257" stroke="#5A718F"/>
+    <rect x="892" y="330" width="140" height="62" rx="12" fill="#344257" stroke="#FFD166"/>
+    <text x="838" y="358" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#DCE8F7">PREBURNER A</text>
+    <text x="838" y="376" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#93A4BC">FUEL-RICH</text>
+    <text x="962" y="358" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#DCE8F7">PREBURNER B</text>
+    <text x="962" y="376" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#93A4BC">OXIDISER-RICH</text>
+    <path d="M852 392 C866 436 884 444 894 452 M948 392 C934 436 916 444 906 452" stroke="#FFD166" stroke-width="5" fill="none"/>
+    <path d="M848 452 L952 452 L940 512 L922 536 L878 536 L860 512 Z" fill="#344257" stroke="#5A718F"/>
+    <ellipse cx="900" cy="492" rx="24" ry="30" fill="url(#flame)"/>
+    <text x="900" y="472" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#DCE8F7">CHAMBER</text>
+    <path d="M872 536 L900 570 L928 536 L946 536 L962 606 L838 606 L854 536 Z" fill="#344257" stroke="#5A718F"/>
+    <path d="M884 570 L916 570 L936 626 L864 626 Z" fill="url(#plume)" opacity=".9"/>
+    <circle cx="838" cy="150" r="5" fill="#9D4EDD"/><circle cx="1062" cy="150" r="5" fill="#9D4EDD"/><circle cx="848" cy="492" r="5" fill="#9D4EDD"/>
+    <path d="M860 548 L836 522 M940 548 L964 522" stroke="#FFD166" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
