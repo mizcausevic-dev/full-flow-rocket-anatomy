@@ -53,7 +53,7 @@ jobs:
           git -c http.extraheader="AUTHORIZATION: bearer ${GITHUB_TOKEN}" \
             push --force "https://github.com/${GITHUB_REPOSITORY}.git" HEAD:pages
 
-      - name: Set repository topics
+      - name: Set repository topics and description
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -63,3 +63,9 @@ jobs:
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/topics" \
             -d '{"names":["aerospace","rocket-engine","staged-combustion","full-flow","raptor","methalox","explainer","visualization","turbopump","education"]}' \
             | grep -E '200|201|204|422' || echo "Topic update skipped."
+          curl -sS -o /tmp/repo.json -w "%{http_code}" -X PATCH \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}" \
+            -d '{"description":"Sectional, frame-driven explainer of a full-flow staged combustion rocket engine.","homepage":"https://mizcausevic-dev.github.io/full-flow-rocket-engine-explainer/"}' \
+            | grep -E '200|201|204' || echo "Description update skipped."
